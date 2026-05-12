@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Octopus Billing Dispute — Evidence Dashboard</title>
+  <title>Squid-Pro-Quo · Octopus Billing Dispute Evidence Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <style>
@@ -45,7 +45,7 @@
     .hero-ey{display:inline-block;background:rgba(255,31,90,.18);color:#FF8AAD;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:var(--rp);margin-bottom:1.25rem;}
     .hero h1{color:#fff;font-size:clamp(1.8rem,4.5vw,3.25rem);font-weight:900;line-height:1.07;letter-spacing:-1.5px;margin-bottom:.9rem;max-width:820px;margin-left:auto;margin-right:auto;}
     .hero h1 em{color:var(--pink);font-style:normal;}
-    .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:560px;margin:0 auto 2.5rem;}
+    .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:580px;margin:0 auto 2.5rem;}
     .stats-row{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
     .sc{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:1rem 1.4rem;min-width:130px;text-align:center;}
     .sc .v{font-size:1.85rem;font-weight:900;letter-spacing:-1px;color:#fff;}
@@ -166,11 +166,11 @@
 <!-- NAV -->
 <nav>
   <div>
-    <div class="nav-brand">Octopus <em>Billing Dispute</em> — Evidence Dashboard</div>
+    <div class="nav-brand"><em>Squid-Pro-Quo</em> · Billing Dispute Evidence Dashboard</div>
     <div class="nav-ref" style="margin-top:1px;">Account A-AD1C0529 · Complaint ref 2096731 · Ombudsman submitted 25 Apr 2026</div>
   </div>
   <div class="nav-links">
-    <a href="#gap">Gap period</a>
+    <a href="#gap">The back-bill</a>
     <a href="#yoy">Year on year</a>
     <a href="#peak">Rate split</a>
     <a href="#heatmap">Usage pattern</a>
@@ -181,44 +181,46 @@
 <!-- TIMELINE BANNER -->
 <div class="timeline-banner">
   <div class="timeline-inner">
-    <span class="tl-item"><span class="tl-dot ok"></span>Jul 2024 — Smart meter installed. IOG billing correct.</span>
+    <span class="tl-item"><span class="tl-dot ok"></span>Apr 2024 — Smart meter installed. IOG billing correct.</span>
     <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot warn"></span>Oct 2025 — Signal fails (O2 3G shutdown). Meter goes dark.</span>
+    <span class="tl-item"><span class="tl-dot warn"></span>8 Jan 2025 — First report to Octopus: intermittent data loss. Told to "monitor 20 days." No follow-up.</span>
     <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot bad"></span>Oct 2025–Apr 2026 — Octopus bills flat Flexible rate. Overcharge begins.</span>
+    <span class="tl-item"><span class="tl-dot bad"></span>Oct 2025 — O2 3G shuts down. Meter goes dark. Octopus never notices; stops billing.</span>
     <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot warn"></span>Apr 2026 — Ombudsman engaged. Case ref 2096731.</span>
+    <span class="tl-item"><span class="tl-dot warn"></span>Jan 2026 — Chris discovers the gap. Raises it formally with Octopus.</span>
+    <span class="tl-sep">›</span>
+    <span class="tl-item"><span class="tl-dot bad"></span>Apr 2026 — Octopus proposes back-billing £2,557 at flat rate. Ombudsman engaged.</span>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-ey">Intelligent Octopus Go · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
-  <h1>Octopus charged <em>£2,557</em> for 7 months.<br>The correct bill is <em>£1,224</em>.</h1>
-  <p class="hero-sub">When the smart meter went dark, Octopus switched to a flat rate — ignoring that 70.3% of all consumption falls in the cheap overnight window. Here is the evidence.</p>
+  <h1>The <em>Dumb-topus</em>:<br>how a 'smart' meter left us <em>Sucker-Punched</em></h1>
+  <p class="hero-sub">The meter went dark in October 2025. Octopus didn't notice for seven months. Now they want £2,557 — billed at the wrong rate, using data they don't have, for a tariff they never correctly configured. The right answer is <strong style="color:var(--green);">£1,224</strong>.</p>
   <div class="stats-row">
-    <div class="sc"><div class="v pk">£1,333</div><div class="l">Import overcharge<br>Oct 2025–Apr 2026</div></div>
+    <div class="sc"><div class="v pk">£2,557</div><div class="l">Octopus back-bill<br>Oct 2025–Apr 2026</div></div>
+    <div class="sc"><div class="v gn">£1,224</div><div class="l">Correct Intelligent Go bill<br>GivEnergy-verified</div></div>
+    <div class="sc"><div class="v pk">£1,333</div><div class="l">Import overcharge<br>at stake</div></div>
     <div class="sc"><div class="v pk">£149</div><div class="l">Export underpayment<br>Jul 2024–Apr 2026</div></div>
-    <div class="sc"><div class="v pk">£80</div><div class="l">GSOP compensation<br>accrued</div></div>
+    <div class="sc"><div class="v pk">£80</div><div class="l">GSOP compensation<br>already accrued</div></div>
     <div class="sc"><div class="v gn">£1,517</div><div class="l">Total claim<br>ref 2096731</div></div>
-    <div class="sc"><div class="v">70.3%</div><div class="l">Verified off-peak usage<br>Jul 2024–Sep 2025</div></div>
-    <div class="sc"><div class="v am">9,537</div><div class="l">kWh at wrong rate<br>gap period</div></div>
   </div>
 </div>
 
-<!-- ═══ SECTION: GAP PERIOD ═══ -->
+<!-- ═══ SECTION: GAP PERIOD — THE INK-VISIBLE METER ═══ -->
 <div id="gap">
 <div class="ps">
   <div class="sh">
-    <div class="ey">Chart A · Gap period billing — Oct 2025 to Apr 2026</div>
-    <h2>What Octopus charged vs what the correct Intelligent Go bill would have been</h2>
-    <p>Each month during the outage, Octopus applied the flat Flexible rate to all consumption. The correct Intelligent Octopus Go bill applies 6.667p/kWh overnight (23:30–05:30) and the Flexible rate for daytime only. The gap between the bars is money owed.</p>
+    <div class="ey">The Ink-visible Meter · Chart A · Gap period back-bill — Oct 2025 to Apr 2026</div>
+    <h2>Seven months of readings that vanished — and a £2,557 back-bill at the wrong rate</h2>
+    <p>When the meter went dark, Octopus stopped receiving data and stopped issuing bills. Nobody at Octopus noticed. When the gap finally came to light in January 2026, Octopus proposed recovering seven months of unbilled consumption using the flat Flexible rate — ignoring entirely that 70.3% of all consumption in this household falls in the cheap overnight window. Here is what the correct Intelligent Go bill looks like beside Octopus's flat-rate back-bill.</p>
   </div>
 
   <div class="metric-row">
-    <div class="mt"><div class="mv pk">£2,557</div><div class="ml">Octopus intends to bill<br>(7-month gap period)</div></div>
+    <div class="mt"><div class="mv pk">£2,557</div><div class="ml">Octopus back-bill<br>(flat Flexible rate)</div></div>
     <div class="mt"><div class="mv gn">£1,224</div><div class="ml">Correct Intelligent Go bill<br>(GivEnergy-verified)</div></div>
-    <div class="mt"><div class="mv pk">£1,333</div><div class="ml">Import overcharge</div></div>
+    <div class="mt"><div class="mv pk">£1,333</div><div class="ml">Overcharge<br>at stake</div></div>
     <div class="mt"><div class="mv">9,537 kWh</div><div class="ml">Total gap-period<br>import (GivEnergy)</div></div>
     <div class="mt"><div class="mv am">6,706 kWh</div><div class="ml">Off-peak share<br>(70.3% of total)</div></div>
     <div class="mt"><div class="mv bl">6.667p</div><div class="ml">Off-peak rate — what<br>Octopus should charge</div></div>
@@ -226,42 +228,42 @@
 
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="legend">
-      <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Octopus billed (flat Flexible rate)</span>
+      <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Octopus back-bill (flat Flexible rate)</span>
       <span class="li"><span class="ls" style="background:#3DD68C;"></span>Correct Intelligent Go bill</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
-      <canvas id="chartA" role="img" aria-label="Grouped bar chart showing monthly Octopus flat-rate billing versus the correct Intelligent Go bill for October 2025 to April 2026. The gap represents overcharging, ranging from £131 in April to £236 in December.">Gap period data: Oct £270 vs £112; Nov £346 vs £159; Dec £501 vs £265; Jan £531 vs £314; Feb £375 vs £173; Mar £326 vs £123; Apr £209 vs £77.</canvas>
+      <canvas id="chartA" role="img" aria-label="Grouped bar chart showing monthly Octopus flat-rate back-bill versus the correct Intelligent Go bill for October 2025 to April 2026. The gap represents the overcharge, ranging from £131 in April to £236 in December.">Gap period data: Oct £270 vs £112; Nov £346 vs £159; Dec £501 vs £265; Jan £531 vs £314; Feb £375 vs £173; Mar £326 vs £123; Apr £209 vs £77.</canvas>
     </div>
     <div class="oc-band">
       <div class="ob">£1,333.37</div>
-      <div class="ot">total import overcharge across the 7-month gap period — Octopus treated 6,706 kWh of cheap off-peak consumption as if it were expensive daytime electricity.</div>
+      <div class="ot">total overcharge in Octopus's proposed back-bill — 6,706 kWh of cheap overnight electricity billed as if it were expensive daytime power.</div>
     </div>
     <button class="info-btn" onclick="openModal('m-tariff')">ⓘ How Intelligent Octopus Go billing works</button>
   </div>
 
   <div class="sh" style="margin-top:3rem;">
-    <div class="ey">Chart B · Monthly overcharge breakdown</div>
-    <h2>What Octopus charged for each component of consumption</h2>
-    <p>Each month's bar shows the two components of the correct IOG bill — cheap off-peak kWh (green) and standard on-peak kWh (amber) — stacked against the flat Flexible rate Octopus actually applied (pink line). The gap above the stacked bar is the overcharge.</p>
+    <div class="ey">Chart B · Monthly back-bill breakdown</div>
+    <h2>What each month's bill should look like, stacked against Octopus's flat-rate proposal</h2>
+    <p>The green bars show the correct off-peak cost (6.667p/kWh overnight), the amber bars show the correct on-peak cost (Flexible rate, daytime only). The pink line is Octopus's proposed flat-rate charge for the same month — always above the correct stack, because it prices overnight electricity as if it were daytime.</p>
   </div>
 
   <div class="card">
     <div class="legend">
       <span class="li"><span class="ls" style="background:#3DD68C;"></span>Off-peak kWh @ 6.667p (correct)</span>
       <span class="li"><span class="ls" style="background:#F5A623;"></span>On-peak kWh @ Flexible rate (correct)</span>
-      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Octopus flat bill (incorrect)</span>
+      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Octopus flat back-bill (wrong)</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
-      <canvas id="chartB" role="img" aria-label="Stacked bar chart showing off-peak cost and on-peak cost making up the correct IOG bill each month, with the Octopus flat bill shown as an overlaid line well above the stack.">Correct IOG split by month: off-peak cost is the dominant component in all months due to 70%+ overnight charging.</canvas>
+      <canvas id="chartB" role="img" aria-label="Stacked bar chart showing the correct off-peak and on-peak costs making up the correct IOG bill each month, with the Octopus flat back-bill shown as an overlaid line well above the stack.">Correct IOG split by month: off-peak cost dominates every month due to 70%+ overnight charging pattern.</canvas>
     </div>
-    <button class="info-btn" onclick="openModal('m-signal')">ⓘ Why the meter stopped working</button>
+    <button class="info-btn" onclick="openModal('m-signal')">ⓘ Why the meter went dark — and why Octopus should have prevented it</button>
   </div>
 
   <!-- Popout strip -->
   <div class="oc-strip">
     <div class="oc-text">
-      <h3>Five reasons Octopus's billing is wrong</h3>
-      <p>The overcharge isn't just a data gap — it involves a pre-existing meter configuration fault, a network failure Octopus was warned about, and timestamp corruption that makes their own gap-period data unusable.</p>
+      <h3>Five reasons Octopus's back-bill is wrong</h3>
+      <p>This isn't just a data gap. It involves a pre-existing meter configuration fault, a network failure Octopus was warned about nine months before it happened, timestamp corruption that renders their own gap-period data unreliable, and a licence condition breach they have yet to acknowledge.</p>
     </div>
     <div class="oc-btns">
       <button class="oc-btn" onclick="openModal('m-tariff')">The IOG tariff</button>
@@ -274,25 +276,25 @@
 </div>
 </div>
 
-<!-- ═══ SECTION: CUMULATIVE ═══ -->
+<!-- ═══ SECTION: CUMULATIVE — THE OCTO-GRIP ═══ -->
 <div class="ps-alt">
 <div class="ps">
   <div class="sh">
-    <div class="ey">Chart C · Cumulative overcharge — Oct 2025 to Apr 2026</div>
-    <h2>The overcharge built to £1,333 over seven months</h2>
-    <p>The running total of the billing gap, month by month. December and January are the worst months — peak winter consumption combined with a high flat rate produced the largest single-month overcharges.</p>
+    <div class="ey">The Octo-Grip · Chart C · Cumulative back-bill — Oct 2025 to Apr 2026</div>
+    <h2>The overcharge tightened its grip month by month — reaching £1,333 by April</h2>
+    <p>The running total of the billing gap, month by month. December and January are the worst months — peak winter consumption combined with heavy overnight EV and battery charging produced the largest single-month overcharges. February's bar is estimated by GivEnergy data; the Octopus meter recorded zero readings that month.</p>
   </div>
   <div class="card">
     <div class="legend">
-      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Cumulative Octopus billing</span>
+      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Cumulative Octopus back-bill</span>
       <span class="li"><span class="ll" style="background:#3DD68C;"></span>Cumulative correct IOG bill</span>
       <span class="li"><span class="ls" style="background:#FF1F5A;opacity:.25;"></span>Overcharge gap</span>
     </div>
     <div class="chart-wrap" style="height:280px;">
-      <canvas id="chartC" role="img" aria-label="Line chart showing cumulative Octopus billing and cumulative correct IOG billing from October 2025 to April 2026. The gap grows to £1,333 by April.">Cumulative Octopus billing reaches £2,557; correct IOG cumulative reaches £1,224.</canvas>
+      <canvas id="chartC" role="img" aria-label="Line chart showing cumulative Octopus back-billing and cumulative correct IOG billing from October 2025 to April 2026. The gap grows to £1,333 by April.">Cumulative Octopus back-bill reaches £2,557; correct IOG cumulative reaches £1,224.</canvas>
     </div>
     <div class="data-warn">
-      <strong>Note on February 2026:</strong> The Octopus meter recorded zero data in February — a complete blackout. The GivEnergy inverter continued recording normally: 1,353 kWh imported (957 kWh off-peak, 396 kWh on-peak). Octopus billed an estimated £375 at flat rate; the correct IOG bill would be £173.
+      <strong>February 2026 — complete blackout:</strong> The Octopus meter recorded zero data this month — not a single half-hourly reading. The GivEnergy inverter continued logging normally throughout: 1,353 kWh imported (957 kWh off-peak, 396 kWh on-peak). Octopus's proposed charge for February is £375 at the flat rate; the correct Intelligent Go bill is £173. This month alone accounts for £202 of the overcharge — billed entirely on estimated consumption using the most expensive rate.
     </div>
   </div>
 </div>
@@ -303,21 +305,21 @@
 <div class="ps">
   <div class="sh">
     <div class="ey">Chart D · Year on year · October – April winter season</div>
-    <h2>The same winter, billed correctly vs incorrectly — a £1,333 swing</h2>
-    <p>The 2024–25 winter (blue) shows Intelligent Go billing working correctly. The 2025–26 winter shows both what Octopus charged at the flat rate (pink) and what the correct IOG bill would have been (green). The two "correct" lines are almost identical — the consumption pattern barely changed. Only the billing method changed.</p>
+    <h2>The same winter, billed correctly versus incorrectly — a £1,333 swing between identical consumption</h2>
+    <p>The 2024–25 winter (blue) shows Intelligent Go billing working exactly as intended. The 2025–26 winter shows both what Octopus are proposing to charge at the flat rate (pink) and what the correct IOG bill would have been (green dashed). The two "correct" lines are almost identical — the consumption pattern barely changed year on year. Only the billing method changed, because the meter went dark.</p>
   </div>
   <div class="card">
     <div class="trow">
       <button class="tb on" onclick="setYoY('bills',this)">All lines</button>
-      <button class="tb" onclick="setYoY('compare',this)">Octopus billed vs correct only</button>
+      <button class="tb" onclick="setYoY('compare',this)">Octopus proposed vs correct only</button>
     </div>
     <div class="legend">
-      <span class="li"><span class="ll" style="background:#378ADD;"></span>2024–25 correct IOG</span>
-      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>2025–26 Octopus flat rate (wrong)</span>
-      <span class="li"><span class="ld" style="color:#3DD68C;"></span>2025–26 correct IOG (should have been)</span>
+      <span class="li"><span class="ll" style="background:#378ADD;"></span>2024–25 correct IOG (meter working)</span>
+      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>2025–26 Octopus flat-rate back-bill (wrong)</span>
+      <span class="li"><span class="ld" style="color:#3DD68C;"></span>2025–26 correct IOG (should have been charged)</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
-      <canvas id="chartD" role="img" aria-label="Multi-line chart comparing October to April billing for 2024-25 and 2025-26 seasons. The 2024-25 and 2025-26 correct IOG lines are nearly identical; the 2025-26 Octopus flat rate line is dramatically higher.">Winter season comparison: 2024-25 total correct £1,214; 2025-26 correct would be £1,224; 2025-26 Octopus charges £2,557.</canvas>
+      <canvas id="chartD" role="img" aria-label="Multi-line chart comparing October to April billing for 2024-25 and 2025-26 seasons. The 2024-25 and 2025-26 correct IOG lines are nearly identical; the 2025-26 Octopus flat-rate back-bill is dramatically higher.">Winter season comparison: 2024-25 total correct £1,214; 2025-26 correct would be £1,224; 2025-26 Octopus back-bill is £2,557.</canvas>
     </div>
     <div class="two-col" style="margin-top:1rem;">
       <div class="ok-band">
@@ -326,51 +328,51 @@
       </div>
       <div class="oc-band">
         <div class="ob">£2,557</div>
-        <div class="ot">Total winter 2025–26 (Octopus flat rate, meter dark)</div>
+        <div class="ot">Total winter 2025–26 (Octopus flat-rate back-bill, meter dark)</div>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- ═══ SECTION: PEAK SPLIT ═══ -->
+<!-- ═══ SECTION: PEAK SPLIT — SUCKER-PUNCHED ═══ -->
 <div class="ps-alt" id="peak">
 <div class="ps">
   <div class="sh">
-    <div class="ey">Chart E · The rate Octopus applied vs the rate that should apply</div>
+    <div class="ey">Sucker-Punched · Chart E · The rate applied vs the rate that should apply</div>
     <h2>Octopus treated all 9,537 kWh as daytime electricity. 70.3% of it was overnight.</h2>
-    <p>The left donut shows Octopus's billing assumption during the gap period: 100% at the Flexible (daytime) rate. The right donut shows the actual usage split verified by GivEnergy across the full working period. A home with an EV and battery charges predominantly overnight — exactly what the Intelligent Go tariff is designed for.</p>
+    <p>The left donut shows Octopus's billing assumption: 100% at the Flexible (daytime) rate for every unit across the entire gap period. The right donut shows the actual usage split, verified by GivEnergy inverter data. A household with an EV and battery charges predominantly overnight — that is precisely why Intelligent Octopus Go exists. Applying a flat daytime rate to this household's consumption pattern is not a reasonable estimate: it is the worst possible one.</p>
   </div>
   <div class="trow">
     <button class="tb on" onclick="setPeakPeriod('gap',this)">Gap period (GivEnergy verified)</button>
-    <button class="tb" onclick="setPeakPeriod('annual',this)">Full working period</button>
+    <button class="tb" onclick="setPeakPeriod('annual',this)">Full working period (Jul 2024–Sep 2025)</button>
   </div>
   <div class="two-col">
     <div class="card">
-      <div class="dtitle">How Octopus billed it</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:.75rem;">flat Flexible rate — no overnight discount applied</div>
+      <div class="dtitle">How Octopus propose to bill it</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:.75rem;">flat Flexible rate — no overnight discount whatsoever</div>
       <div class="chart-wrap" style="height:210px;">
-        <canvas id="chartE1" role="img" aria-label="Donut chart showing Octopus applied 100% flat rate to all consumption during the gap period, with no time-of-use split.">Octopus billing: 100% flat rate, 0% off-peak rate applied.</canvas>
+        <canvas id="chartE1" role="img" aria-label="Donut chart showing Octopus applied 100% flat rate to all consumption during the gap period, with no time-of-use split.">Octopus proposed billing: 100% flat rate, 0% off-peak rate applied.</canvas>
       </div>
       <div class="legend" style="margin-top:.75rem;justify-content:center;">
-        <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Flat rate (all kWh)</span>
+        <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Flat rate (all kWh treated as daytime)</span>
       </div>
-      <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.6;">Octopus applied the Flexible tariff rate (26.3–27.7p/kWh) to every unit — overnight, daytime, and everything in between. No time-of-use split was calculated.</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.6;">Octopus applied the Flexible tariff rate (26.3–27.7p/kWh) to every unit of the back-bill — overnight, daytime, and everything in between. No time-of-use split was calculated, despite this being an IOG account.</p>
     </div>
     <div class="card">
       <div class="dtitle">What the split actually is</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:.75rem;">verified by GivEnergy inverter · 5-min resolution data</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:.75rem;">verified by GivEnergy inverter · 5-minute resolution · independent of DCC network</div>
       <div class="chart-wrap" style="height:210px;">
-        <canvas id="chartE2" role="img" aria-label="Donut chart showing the actual usage split: 70.3% off-peak overnight and 29.7% on-peak daytime, verified by GivEnergy inverter data.">Actual split gap period: 70.3% off-peak (23:30-05:30), 29.7% on-peak (daytime).</canvas>
+        <canvas id="chartE2" role="img" aria-label="Donut chart showing the actual usage split: 70.3% off-peak overnight and 29.7% on-peak daytime, verified by GivEnergy inverter data.">Actual split for gap period: 70.3% off-peak (23:30–05:30), 29.7% on-peak (daytime).</canvas>
       </div>
       <div class="legend" style="margin-top:.75rem;justify-content:center;">
         <span class="li"><span class="ls" style="background:#3DD68C;"></span>Off-peak @ 6.667p (23:30–05:30)</span>
         <span class="li"><span class="ls" style="background:#F5A623;"></span>On-peak @ Flexible rate</span>
       </div>
-      <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.6;">70.3% of all import falls in the overnight off-peak window — EV charging and battery top-up. This was verified across 15 months of working meter data (Jul 2024–Sep 2025).</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.6;">70.3% of all import falls in the overnight off-peak window — EV charging and battery top-up. Verified across 15 months of working meter data (Jul 2024–Sep 2025) and corroborated by GivEnergy inverter logs throughout the gap period.</p>
     </div>
   </div>
-  <button class="info-btn" onclick="openModal('m-config')">ⓘ Why the meter was never configured correctly</button>
+  <button class="info-btn" onclick="openModal('m-config')">ⓘ The meter configuration fault Octopus haven't addressed</button>
 </div>
 </div>
 
@@ -379,12 +381,12 @@
 <div class="ps">
   <div class="sh">
     <div class="ey">Chart F · Usage heatmap — GivEnergy half-hourly data</div>
-    <h2>The overnight charging pattern is unmistakeable</h2>
-    <p>Each row is an hour of the day; each column a day of the week. Colour shows average import kWh per 30-minute slot — dark blue means heavy importing. The concentrated overnight band (midnight–05:30) is the EV and battery charging at the cheap Intelligent Go rate. Octopus billed all of it at the expensive daytime rate during the gap period. Switch between the winter season (Oct–Apr) and the full working year to compare patterns.</p>
+    <h2>The overnight charging pattern is unmistakeable — and Octopus billed every unit at the peak rate</h2>
+    <p>Each row is an hour of the day; each column a day of the week. Colour shows average import kWh per 30-minute slot — dark red means heavy importing. The concentrated overnight band (midnight–05:30) is the EV and battery charging at the cheap Intelligent Go rate. During the gap period, Octopus proposed billing all of it at the expensive daytime rate. Switch between the winter season (Oct–Apr) and the full working year to compare the pattern.</p>
   </div>
   <div class="card">
     <div class="trow">
-      <button class="tb on" onclick="setHeatmap('winter',this)">Oct – Apr (winter)</button>
+      <button class="tb on" onclick="setHeatmap('winter',this)">Oct – Apr (winter season)</button>
       <button class="tb" onclick="setHeatmap('annual',this)">Full working year</button>
     </div>
     <div class="hmap-outer">
@@ -395,17 +397,18 @@
       <div class="hmap-leg-bar"></div>
       <span>High import</span>
     </div>
-    <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.65;">The brightest cells are in the 00:00–05:00 band — this is the cheap overnight rate window on Intelligent Octopus Go (23:30–05:30). During the billing gap, Octopus charged this consumption at the same rate as peak afternoon electricity.</p>
-    <button class="info-btn" onclick="openModal('m-corrupt')">ⓘ Why Octopus's own meter data can't be used for the gap period</button>
+    <p style="font-size:11px;color:var(--muted);margin-top:.75rem;line-height:1.65;">The hottest cells are in the 00:00–05:00 band — this is the cheap overnight rate window on Intelligent Octopus Go (23:30–05:30). Octopus's proposed back-bill charges every one of these units at the same rate as peak afternoon electricity. Profile 1 billing — designed for a typical 2,700 kWh/year home — is spectacularly wrong for a 25,000 kWh/year household with an EV and home battery.</p>
+    <button class="info-btn" onclick="openModal('m-corrupt')">ⓘ Why Octopus's own gap-period data can't be trusted for time-of-use billing</button>
   </div>
 </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>Octopus Billing Dispute — Evidence Dashboard</strong> · Account A-AD1C0529 · Complaint ref 2096731</p>
+  <p><strong>Squid-Pro-Quo · Octopus Billing Dispute Evidence Dashboard</strong> · Account A-AD1C0529 · Complaint ref 2096731</p>
   <p>Sources: GivEnergy inverter CH2414G266 (5-min resolution) · Octopus API half-hourly data · Flexible rate history via AgileBuddy</p>
   <p style="margin-top:.3rem;">Off-peak rate: 6.667p/kWh (23:30–05:30) · On-peak: 24.5–28.09p/kWh (actual published rates per month) · Export: 15p/kWh to Feb 2026, 12p/kWh from Mar 2026</p>
+  <p style="margin-top:.5rem;color:rgba(255,255,255,.25);">Prepared by Chris Upton · ceupton@gmail.com · Ombudsman deadline 18 Jun 2026</p>
 </footer>
 
 <!-- ═══ MODALS ═══ -->
@@ -413,40 +416,44 @@
 <div class="mo" id="m-tariff">
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-tariff')">✕</button>
-    <div class="mtag">Background</div>
-    <h3>How Intelligent Octopus Go billing works</h3>
-    <p>Intelligent Octopus Go (IOG) is a time-of-use tariff with two rates: a cheap off-peak rate for electricity used between 23:30 and 05:30, and a standard Flexible rate for everything else. It is designed specifically for households with EVs and home batteries who can shift heavy consumption to the overnight window.</p>
-    <div class="mhl"><strong>Off-peak (23:30–05:30): 6.667p/kWh</strong><br>Standard ("on-peak") hours: 24.5–28.09p/kWh depending on the month — the published Flexible tariff rate.</div>
-    <p>For a household like this one — with an EV and a GivEnergy battery system — IOG delivers major savings because the bulk of import (70.3% across the verified working period) falls in the cheap window. The tariff requires a working smart meter capable of reporting half-hourly time-stamped data to Octopus.</p>
+    <div class="mtag">The IOG Tariff</div>
+    <h3>Intelligent Octopus Go — and why a flat rate is the worst possible estimate</h3>
+    <p>Intelligent Octopus Go (IOG) is a time-of-use tariff with two rates: a cheap off-peak rate for electricity used between 23:30 and 05:30, and a standard Flexible rate for everything else. It is designed specifically for households with EVs and home batteries that shift heavy consumption to the overnight window. That is exactly this household.</p>
+    <div class="mhl"><strong>Off-peak (23:30–05:30): 6.667p/kWh</strong><br>On-peak (all other hours): 24.5–28.09p/kWh depending on the month — the published Flexible tariff rate. The off-peak saving is approximately 20p per kWh.</div>
+    <p>Across the verified working period (Jul 2024–Sep 2025), 73.3% of all import fell in the overnight window. The gap-period figure, verified by GivEnergy, is 70.3%. Applying a flat daytime rate to a household where 70%+ of consumption is overnight is not a neutral approximation — it is a systematic overcharge of approximately 20p on every one of those off-peak units.</p>
+    <p>Ofgem's licence conditions require suppliers to bill on the tariff to which a customer is subscribed. Where a fault prevents accurate time-of-use metering, the remedy is not to apply the most expensive available rate — it is to use the best available evidence of actual usage patterns, including third-party inverter data.</p>
     <table class="mtbl">
       <tr><th>Component</th><th>Value</th></tr>
       <tr><td>Off-peak rate</td><td class="ok">6.667p/kWh</td></tr>
       <tr><td>On-peak rate (Oct–Dec 2025)</td><td>26.3p/kWh</td></tr>
       <tr><td>On-peak rate (Jan–Mar 2026)</td><td>27.7p/kWh</td></tr>
       <tr><td>On-peak rate (Apr 2026)</td><td>24.7p/kWh</td></tr>
-      <tr><td>Flat Flexible rate applied by Octopus</td><td class="bad">All kWh at on-peak rate</td></tr>
-      <tr><td>Off-peak saving per kWh vs Flexible</td><td class="ok">~20p/kWh</td></tr>
+      <tr><td>Flat Flexible rate proposed by Octopus</td><td class="bad">All kWh at on-peak rate</td></tr>
+      <tr><td>Off-peak saving vs Flexible</td><td class="ok">~20p/kWh</td></tr>
+      <tr><td>Off-peak kWh in gap period (GivEnergy)</td><td>6,706 kWh</td></tr>
+      <tr><td>Resulting overcharge</td><td class="bad">£1,333.37</td></tr>
     </table>
-    <p>By switching to the flat Flexible rate for the gap period, Octopus removed the 20p/kWh saving from every off-peak unit — 6,706 kWh in total.</p>
   </div>
 </div>
 
 <div class="mo" id="m-signal">
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-signal')">✕</button>
-    <div class="mtag">The core problem</div>
-    <h3>Why the smart meter stopped working</h3>
-    <p>The smart meter at 1 Cresswell Lane uses a Toshiba SKU2 SMETS2 device with a cellular communications hub. In the DCC Central/South region, the hub uses O2's 2G/3G network to transmit half-hourly data to Octopus. Rural SN16 has borderline signal — and O2 progressively shut down 3G through 2025.</p>
-    <div class="mhl"><strong>O2's 3G shutdown is a planned, announced network change — not an unpredictable event.</strong> Ofgem's Operational Licence Conditions require energy suppliers to proactively replace or upgrade smart metering assets before WAN services end. Octopus did not do this.</div>
-    <p>The WAN LED on the meter hub became intermittent from October 2025, indicating loss of signal rather than hardware failure. The MESH LED (which would indicate a local mesh backup) has been permanently off — there are no mesh-capable neighbours in this rural location. There is no fallback communications path.</p>
-    <p>Octopus was notified of the problem in writing on 8 January 2025 — fifteen months before the formal complaint. The agent advised monitoring for 20 days with no follow-up. No proactive replacement was arranged despite the known 3G shutdown timeline.</p>
+    <div class="mtag">The Signal Failure</div>
+    <h3>The Ink-visible Meter — a known shutdown, a foreseeable failure, and a missing repair</h3>
+    <p>The smart metre at 1 Cresswell Lane uses a Toshiba SKU2 SMETS2 device with a cellular communications hub. In the DCC Central/South region, the hub uses O2's network to transmit half-hourly data to Octopus. This rural SN16 postcode has borderline signal — and O2 progressively shut down its 2G/3G infrastructure through 2025.</p>
+    <div class="mhl"><strong>O2's 3G shutdown was a planned, publicly announced event — not an act of God.</strong> Ofgem's Operational Licence Conditions (Standard Licence Condition 25A and the Smart Metering Installation Code of Practice) require energy suppliers to proactively replace or upgrade smart metering assets before WAN services are withdrawn. Octopus took no action at this address despite the known shutdown timeline.</div>
+    <p>The WAN LED on the metre hub went intermittent from October 2025, indicating loss of signal rather than hardware failure. The MESH LED has been permanently off — there are no mesh-capable neighbours in this rural location, so there is no fallback communications path. The metre did not fail spontaneously; it was abandoned on a network that Octopus knew was closing.</p>
+    <p>Octopus was notified of the problem in writing on 8 January 2025 — nine months before O2's 3G switch-off and fifteen months before the formal complaint. The agent advised monitoring for 20 days. No follow-up was made and no replacement was arranged.</p>
     <table class="mtbl">
       <tr><th>Date</th><th>Event</th></tr>
-      <tr><td>8 Jan 2025</td><td>First report to Octopus of intermittent data loss</td></tr>
-      <tr><td>Oct 2025</td><td>Meter effectively dark (data coverage: 87%→37%→16%→0%)</td></tr>
-      <tr><td>1 Apr 2026</td><td>Engineer visit confirms: (a) insufficient signal, (b) meter not configured for ToU</td></tr>
-      <tr><td>16 Apr 2026</td><td>Octopus tells Chris to check 4G signal — cites T&Cs to justify flat billing</td></tr>
-      <tr><td>25 Apr 2026</td><td>Ombudsman submission filed</td></tr>
+      <tr><td>8 Jan 2025</td><td>First written report to Octopus of intermittent data loss</td></tr>
+      <tr><td>1 Oct 2025</td><td>O2 3G shutdown. Metre effectively dark.</td></tr>
+      <tr><td>Oct–Dec 2025</td><td>Data coverage collapses: 87% → 37% → 16%</td></tr>
+      <tr><td>Feb 2026</td><td class="bad">0% data coverage. Complete blackout.</td></tr>
+      <tr><td>1 Apr 2026</td><td>Engineer visit confirms: (a) insufficient signal, (b) metre never configured for ToU</td></tr>
+      <tr><td>16 Apr 2026</td><td>Octopus suggests checking 4G signal; cites T&Cs to justify flat billing</td></tr>
+      <tr><td>25 Apr 2026</td><td>Ombudsman submission filed. GSOP 5-day window expired 30 Apr 2026.</td></tr>
     </table>
   </div>
 </div>
@@ -454,49 +461,50 @@
 <div class="mo" id="m-config">
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-config')">✕</button>
-    <div class="mtag">Meter configuration fault</div>
-    <h3>The meter was never set up to record on-peak and off-peak separately</h3>
-    <p>The engineer who visited on 1 April 2026 confirmed two separate faults. The first was the signal problem. The second was more fundamental: the meter had never been configured to maintain separate registers for on-peak and off-peak consumption.</p>
-    <div class="mhl"><strong>This means the meter could not have billed correctly on Intelligent Octopus Go from the very beginning</strong> — even when it was transmitting data. Correct IOG billing requires the meter to distinguish half-hourly consumption by time-of-use period. Without that configuration, Octopus was computing the split retrospectively from raw timestamped half-hourly data, not from metered registers.</div>
-    <p>The GivEnergy evidence covering the working period shows consistent discrepancies between what the Octopus meter reported and what the inverter recorded. The billing calculation from the Octopus API data may therefore have been incorrect even before October 2025.</p>
-    <p>Octopus's response to this — that their T&Cs permit profile-based (flat-rate) billing when half-hourly data is unavailable — addresses only the signal failure. It does not address the prior configuration fault, nor the question of why the meter was approved for IOG billing in this state.</p>
+    <div class="mtag">Meter Configuration Fault</div>
+    <h3>Tentacle-Tangled: the metre was never set up to record time-of-use data correctly</h3>
+    <p>The engineer who visited on 1 April 2026 confirmed not one but two separate faults. The first was the O2 signal problem. The second was more fundamental: the metre had never been configured to maintain separate registers for on-peak and off-peak consumption.</p>
+    <div class="mhl"><strong>This means the metre could not have billed correctly on Intelligent Octopus Go from the day it was installed</strong> — even when it was transmitting data. Correct IOG billing requires the metre to distinguish half-hourly consumption by time-of-use period. Without that configuration, the metre was not fit for purpose on this tariff.</div>
+    <p>Octopus's response — that their T&Cs permit profile-based (flat-rate) billing when half-hourly data is unavailable — addresses only the signal failure. It does not address the prior configuration fault, nor the question of who approved this metre for IOG billing in this state, nor why two years of apparently correct IOG bills were produced from a metre that lacked the registers to support them.</p>
+    <p>Profile 1 billing — the industry default applied when half-hourly data is absent — assumes a typical annual consumption of around 2,700 kWh. This household consumes approximately 25,000 kWh per year, including EV charging and a home battery. Profile 1 is not a reasonable or proportionate fallback for an IOG customer with ten times the typical consumption.</p>
+    <p>Octopus's obligation is to supply on the contracted tariff. Where their own equipment prevents them from doing so, the cost of that failure should not be passed to the customer as a back-bill at the most expensive available rate.</p>
   </div>
 </div>
 
 <div class="mo" id="m-corrupt">
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-corrupt')">✕</button>
-    <div class="mtag">Timestamp corruption</div>
+    <div class="mtag">Timestamp Corruption</div>
     <h3>Why Octopus's own gap-period data cannot be used for time-of-use billing</h3>
-    <p>During the gap period, the meter did transmit some data — but with corrupted timestamps. When the meter re-established a brief signal connection after days of silence, it transmitted accumulated stored readings with the timestamp of the reconnection day, not the day the consumption actually occurred.</p>
-    <div class="mhl"><strong>11 days in the gap period show more than 50 kWh recorded — against a normal daily average of ~30 kWh.</strong> The worst case is 18 January 2026: 99.6 kWh recorded in a single calendar day. This is physically impossible — it represents approximately 3.3× this household's normal daily consumption.</div>
-    <p>These inflated readings account for 38.3% of all gap-period Octopus kWh. More significantly, the compressed timestamp corruption shifts consumption from the actual time it occurred (likely overnight, off-peak) into arbitrary daytime slots — artificially inflating the calculated on-peak proportion.</p>
-    <p>Octopus's own corrupted data shows 63.1% off-peak on these days, against the GivEnergy-verified actual of 69.6%. If Octopus were to use their own gap-period data for ToU billing rather than flat rate, it would still result in an overcharge — compounding the error.</p>
+    <p>During the gap period, the metre did transmit some data — but with corrupted timestamps. When the metre briefly re-established a signal after days of silence, it transmitted accumulated stored readings with the reconnection timestamp, not the timestamps of the days on which the consumption actually occurred.</p>
+    <div class="mhl"><strong>11 days in the gap period show more than 50 kWh recorded — against a normal daily average of roughly 30 kWh.</strong> The worst case is 18 January 2026: 99.6 kWh recorded in a single calendar day. This is physically impossible — approximately 3.3 times the household's normal daily consumption, compressed into 24 hours because the metre had been offline for days.</div>
+    <p>These inflated, timestamp-corrupted readings account for 38.3% of all gap-period Octopus kWh. More critically, the compression shifts consumption from the actual time it occurred — largely overnight, off-peak — into arbitrary daytime slots, artificially inflating the apparent on-peak proportion.</p>
+    <p>Were Octopus to use their own corrupted gap-period data for time-of-use billing rather than the flat rate, the result would still overcharge: their data shows 63.1% off-peak on corrupted days, against the GivEnergy-verified 69.6%. The GivEnergy inverter records at 5-minute resolution with its own internal clock, entirely independent of the DCC network — its timestamps were unaffected throughout.</p>
     <table class="mtbl">
-      <tr><th>Source</th><th>Off-peak %</th><th>Reliability</th></tr>
-      <tr><td>Octopus meter (corrupted days)</td><td class="bad">63.1%</td><td class="bad">Unreliable — clock drift</td></tr>
-      <tr><td>GivEnergy inverter (same period)</td><td class="ok">69.6%</td><td class="ok">Accurate timestamps</td></tr>
+      <tr><th>Data source</th><th>Off-peak %</th><th>Reliability</th></tr>
+      <tr><td>Octopus metre (corrupted days)</td><td class="bad">63.1%</td><td class="bad">Unreliable — clock drift</td></tr>
+      <tr><td>GivEnergy inverter (same period)</td><td class="ok">69.6%</td><td class="ok">Accurate — independent clock</td></tr>
       <tr><td>Working period baseline (Jul 24–Sep 25)</td><td class="ok">73.3%</td><td class="ok">Verified — 15 months of data</td></tr>
     </table>
-    <p>The GivEnergy inverter records at 5-minute resolution with its own internal clock — independent of the DCC network. Its timestamps were unaffected by the WAN outage throughout the entire gap period.</p>
+    <p>The GivEnergy data is the only reliable source for the gap period. Octopus's refusal to accept it as the basis for rebilling is not a technical position — it is a commercial one.</p>
   </div>
 </div>
 
 <div class="mo" id="m-export">
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-export')">✕</button>
-    <div class="mtag">Separate fault</div>
+    <div class="mtag">Separate Fault</div>
     <h3>Export underpayment — a fault that predates the signal failure</h3>
-    <p>Separately from the import billing dispute, GivEnergy data shows that Octopus consistently recorded less export than the inverter exported — even during months with 100% import data coverage.</p>
-    <div class="mhl"><strong>August 2025:</strong> GivEnergy recorded 767.2 kWh exported. Octopus recorded 670.7 kWh — a gap of 96.5 kWh worth £14.48 at the export rate. This month had 100% import data coverage, so the gap cannot be explained by the signal problem.</div>
-    <p>This suggests a separate fault in the export meter register or the SEG data submission process, distinct from the WAN signal failure that caused the import billing problem.</p>
+    <p>Separately from the import back-billing dispute, GivEnergy data shows that Octopus consistently recorded less export than the inverter exported — even during months with 100% import data coverage, when the metre was fully functional.</p>
+    <div class="mhl"><strong>August 2025:</strong> GivEnergy recorded 767.2 kWh exported. Octopus recorded 670.7 kWh — a shortfall of 96.5 kWh worth £14.48 at the export rate. This month had 100% import data coverage, so the discrepancy cannot be attributed to the signal problem.</div>
+    <p>This points to a separate fault in the export metre register or the Smart Export Guarantee data submission process. During the gap period, Octopus recorded only 28% of the export the inverter measured — consistent with the metre being dark for most of this period but worsening a pre-existing under-recording problem.</p>
     <table class="mtbl">
       <tr><th>Period</th><th>GivEnergy export</th><th>Octopus recorded</th><th>Underpaid</th></tr>
-      <tr><td>Jul 2024–Sep 2025 (pre-gap)</td><td>2,661 kWh</td><td>2,516 kWh</td><td class="bad">£62.54</td></tr>
+      <tr><td>Jul 2024–Sep 2025 (metre working)</td><td>2,661 kWh</td><td>2,516 kWh</td><td class="bad">£62.54</td></tr>
       <tr><td>Oct 2025–Apr 2026 (gap period)</td><td>860 kWh</td><td>241 kWh</td><td class="bad">£86.38</td></tr>
       <tr><td class="ho">Total export underpayment</td><td></td><td></td><td class="bad">£148.92</td></tr>
     </table>
-    <p>The export rate was 15p/kWh until 28 February 2026 and 12p/kWh from 1 March 2026. During the gap period, Octopus recorded only 28% of the export the inverter measured — consistent with the meter being dark for most of this period.</p>
+    <p>The export rate was 15p/kWh until 28 February 2026 and 12p/kWh from 1 March 2026. The total export underpayment of £148.92 is a separate element of the claim, independent of the import back-billing dispute.</p>
   </div>
 </div>
 
@@ -509,7 +517,7 @@ const GAP_LABELS  = ['Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 
 const GAP_KWH     = [1026.7, 1315.9, 1903.5, 1915.7, 1353.3, 1177.7, 844.2];
 const GAP_OP_KWH  = [815.5,  971.3,  1239.2, 1017.5, 956.9,  962.6,  742.8]; // off-peak
 const GAP_IP_KWH  = [211.2,  344.6,  664.3,  898.2,  396.4,  215.1,  101.4]; // on-peak
-const GAP_FLEX    = [270.02, 346.08, 500.62, 530.65, 374.86, 326.22, 208.52]; // Octopus billed
+const GAP_FLEX    = [270.02, 346.08, 500.62, 530.65, 374.86, 326.22, 208.52]; // Octopus back-bill
 const GAP_IOG     = [112.30, 159.28, 264.81, 314.15, 172.52, 123.19,  77.35]; // correct IOG
 const GAP_OC      = [157.72, 186.80, 235.81, 216.50, 202.34, 203.03, 131.17]; // overcharge
 
@@ -549,13 +557,13 @@ new Chart(document.getElementById('chartA'),{
   data:{
     labels: GAP_LABELS,
     datasets:[
-      { label:'Octopus billed', data:GAP_FLEX, backgroundColor:'#FF1F5A', borderRadius:4, borderSkipped:false },
+      { label:'Octopus back-bill', data:GAP_FLEX, backgroundColor:'#FF1F5A', borderRadius:4, borderSkipped:false },
       { label:'Correct IOG bill', data:GAP_IOG, backgroundColor:'#3DD68C', borderRadius:4, borderSkipped:false }
     ]
   },
   options:{
     responsive:true, maintainAspectRatio:false,
-    plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label:ctx=>` £${ctx.parsed.y.toFixed(2)}`, afterDatasetsDraw:undefined, afterBody:undefined }}},
+    plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label:ctx=>` £${ctx.parsed.y.toFixed(2)}` }}},
     scales:{
       x:{ grid:grd(), ticks:tck() },
       y:{ grid:grd(), ticks:{ ...tck(), callback:v=>'£'+v.toFixed(0) }, beginAtZero:true }
@@ -563,7 +571,7 @@ new Chart(document.getElementById('chartA'),{
   }
 });
 
-/* ── CHART B: stacked correct IOG + line for flat bill ── */
+/* ── CHART B: stacked correct IOG + line for flat back-bill ── */
 new Chart(document.getElementById('chartB'),{
   type:'bar',
   data:{
@@ -571,7 +579,7 @@ new Chart(document.getElementById('chartB'),{
     datasets:[
       { label:'Off-peak cost @ 6.667p', data:GAP_OP_COST, backgroundColor:'#3DD68C', stack:'c', borderRadius:0 },
       { label:'On-peak cost @ Flexible rate', data:GAP_IP_COST, backgroundColor:'#F5A623', stack:'c', borderRadius:[4,4,0,0] },
-      { label:'Octopus flat bill', data:GAP_FLEX, type:'line', borderColor:'#FF1F5A', backgroundColor:'transparent', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35, order:0 }
+      { label:'Octopus flat back-bill', data:GAP_FLEX, type:'line', borderColor:'#FF1F5A', backgroundColor:'transparent', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35, order:0 }
     ]
   },
   options:{
@@ -591,7 +599,7 @@ new Chart(document.getElementById('chartC'),{
   data:{
     labels: GAP_LABELS,
     datasets:[
-      { label:'Cumulative Octopus billing', data:cumsum(GAP_FLEX), borderColor:'#FF1F5A', backgroundColor:'rgba(255,31,90,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#FF1F5A', tension:.4 },
+      { label:'Cumulative Octopus back-bill', data:cumsum(GAP_FLEX), borderColor:'#FF1F5A', backgroundColor:'rgba(255,31,90,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#FF1F5A', tension:.4 },
       { label:'Cumulative correct IOG', data:cumsum(GAP_IOG), borderColor:'#3DD68C', backgroundColor:'rgba(61,214,140,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#3DD68C', tension:.4 }
     ]
   },
@@ -612,7 +620,7 @@ let chartD = new Chart(document.getElementById('chartD'),{
     labels: YOY_LABELS,
     datasets:[
       { label:'2024–25 correct IOG', data:WIN2425, borderColor:'#378ADD', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#378ADD', tension:.35 },
-      { label:'2025–26 Octopus flat (wrong)', data:GAP_FLEX, borderColor:'#FF1F5A', borderWidth:3, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35 },
+      { label:'2025–26 Octopus flat back-bill (wrong)', data:GAP_FLEX, borderColor:'#FF1F5A', borderWidth:3, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35 },
       { label:'2025–26 correct IOG', data:GAP_IOG, borderColor:'#3DD68C', borderWidth:2, borderDash:[6,4], pointRadius:3, pointBackgroundColor:'#3DD68C', tension:.35 }
     ]
   },
@@ -673,7 +681,6 @@ const HOURS = Array.from({length:24},(_,i)=>i.toString().padStart(2,'0')+':00');
 
 function hmapColor(v, maxV){
   const t = Math.min(v / maxV, 1);
-  /* low = cool blue, mid = green, high = red */
   if(t < 0.3){
     const p = t/0.3;
     return `rgb(${Math.round(56+p*(61-56))},${Math.round(145+p*(214-145))},${Math.round(221+p*(140-221))})`;
