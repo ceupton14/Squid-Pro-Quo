@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Squid-Pro-Quo · Octopus Billing Dispute Evidence Dashboard</title>
+  <title>Squid-Pro-Quo · Octopus Billing Dispute Evidence</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <style>
@@ -167,14 +167,14 @@
 <nav>
   <div>
     <div class="nav-brand"><em>Squid-Pro-Quo</em> · Billing Dispute Evidence Dashboard</div>
-    <div class="nav-ref" style="margin-top:1px;">Account A-AD1C0529 · Complaint ref 2096731 · Ombudsman submitted 25 Apr 2026</div>
+    <div class="nav-ref" style="margin-top:1px;">Account A-AD1C0529 · Complaint ref 2096731 · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
   </div>
   <div class="nav-links">
     <a href="#gap">The back-bill</a>
     <a href="#yoy">Year on year</a>
     <a href="#peak">Rate split</a>
     <a href="#heatmap">Usage pattern</a>
-    <span class="nav-pill">⚠ Awaiting Ombudsman</span>
+    <span class="nav-pill">⚠ Dispute Ongoing</span>
   </div>
 </nav>
 
@@ -189,12 +189,13 @@
     <span class="tl-sep">›</span>
     <span class="tl-item"><span class="tl-dot warn"></span>Jan 2026 — Chris discovers the gap. Raises it formally with Octopus.</span>
     <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot bad"></span>Apr 2026 — Octopus proposes back-billing £2,557 at flat rate. Ombudsman engaged.</span>
+    <span class="tl-item"><span class="tl-dot bad"></span>Apr 2026 — Octopus proposes back-billing £2,557 at flat rate. Formal dispute raised.</span>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
+  <img src="octpush.png" alt="OctPush — Energy Sapping" style="width:180px;height:auto;margin-bottom:1.25rem;display:block;margin-left:auto;margin-right:auto;border-radius:16px;">
   <div class="hero-ey">Intelligent Octopus Go · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
   <h1>The <em>Dumb-topus</em>:<br>how a 'smart' meter left us <em>Sucker-Punched</em></h1>
   <p class="hero-sub">The meter went dark in October 2025. Octopus didn't notice for seven months. Now they want £2,557 — billed at the wrong rate, using data they don't have, for a tariff they never correctly configured. The right answer is <strong style="color:var(--green);">£1,224</strong>.</p>
@@ -408,7 +409,7 @@
   <p><strong>Squid-Pro-Quo · Octopus Billing Dispute Evidence Dashboard</strong> · Account A-AD1C0529 · Complaint ref 2096731</p>
   <p>Sources: GivEnergy inverter CH2414G266 (5-min resolution) · Octopus API half-hourly data · Flexible rate history via AgileBuddy</p>
   <p style="margin-top:.3rem;">Off-peak rate: 6.667p/kWh (23:30–05:30) · On-peak: 24.5–28.09p/kWh (actual published rates per month) · Export: 15p/kWh to Feb 2026, 12p/kWh from Mar 2026</p>
-  <p style="margin-top:.5rem;color:rgba(255,255,255,.25);">Prepared by Chris Upton · ceupton@gmail.com · Ombudsman deadline 18 Jun 2026</p>
+  <p style="margin-top:.5rem;color:rgba(255,255,255,.25);">Prepared by Chris Upton · ceupton@gmail.com</p>
 </footer>
 
 <!-- ═══ MODALS ═══ -->
@@ -453,7 +454,7 @@
       <tr><td>Feb 2026</td><td class="bad">0% data coverage. Complete blackout.</td></tr>
       <tr><td>1 Apr 2026</td><td>Engineer visit confirms: (a) insufficient signal, (b) metre never configured for ToU</td></tr>
       <tr><td>16 Apr 2026</td><td>Octopus suggests checking 4G signal; cites T&Cs to justify flat billing</td></tr>
-      <tr><td>25 Apr 2026</td><td>Ombudsman submission filed. GSOP 5-day window expired 30 Apr 2026.</td></tr>
+      <tr><td>Apr 2026</td><td>Octopus proposes flat-rate back-bill. GSOP 5-day resolution window expired. Formal dispute raised.</td></tr>
     </table>
   </div>
 </div>
