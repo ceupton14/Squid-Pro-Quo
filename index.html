@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Squid-Pro-Quo · Octopus Billing Dispute Evidence</title>
+  <title>Octopus Energy — Billing Dispute Evidence</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <style>
@@ -40,35 +40,76 @@
     .nav-pill{background:var(--pink);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--rp);}
 
     /* HERO */
-    .hero{background:var(--dark);padding:4.5rem 2rem 7rem;text-align:center;position:relative;}
+    .hero{background:var(--dark);padding:4rem 2rem 7rem;position:relative;}
     .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:70px;background:var(--light);clip-path:ellipse(58% 100% at 50% 100%);}
+    .hero-inner{display:grid;grid-template-columns:1.15fr 0.85fr;gap:3rem;max-width:1100px;margin:0 auto;align-items:start;}
+    .hero-left{text-align:center;}
     .hero-ey{display:inline-block;background:rgba(255,31,90,.18);color:#FF8AAD;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:var(--rp);margin-bottom:1.25rem;}
-    .hero h1{color:#fff;font-size:clamp(1.8rem,4.5vw,3.25rem);font-weight:900;line-height:1.07;letter-spacing:-1.5px;margin-bottom:.9rem;max-width:820px;margin-left:auto;margin-right:auto;}
+    .hero h1{color:#fff;font-size:clamp(1.5rem,3.2vw,2.5rem);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:.9rem;}
     .hero h1 em{color:var(--pink);font-style:normal;}
-    .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:580px;margin:0 auto 2.5rem;}
-    .stats-row{display:flex;flex-direction:column;gap:.6rem;align-items:center;position:relative;z-index:1;}
+    .hero-sub{color:rgba(255,255,255,.55);font-size:.9rem;margin:0 auto 2rem;line-height:1.7;}
+    .stats-row{display:flex;flex-direction:column;gap:.5rem;align-items:center;position:relative;z-index:1;}
     /* calc rows */
-    .calc-row{display:flex;gap:.5rem;justify-content:center;align-items:center;flex-wrap:wrap;}
-    .calc-row-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);text-align:center;margin-top:.25rem;}
-    .cc{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:.85rem 1.2rem;min-width:115px;text-align:center;}
+    .calc-row{display:flex;gap:.4rem;justify-content:center;align-items:center;flex-wrap:wrap;}
+    .calc-row-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);text-align:center;margin-top:.2rem;}
+    .cc{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:.7rem .9rem;min-width:100px;text-align:center;}
     .cc.hi-pink{background:rgba(255,31,90,.18);border-color:rgba(255,31,90,.35);}
     .cc.hi-green{background:rgba(61,214,140,.15);border-color:rgba(61,214,140,.3);}
-    .cc .v{font-size:1.65rem;font-weight:900;letter-spacing:-1px;color:#fff;}
+    .cc .v{font-size:1.45rem;font-weight:900;letter-spacing:-.5px;color:#fff;}
     .cc .v.pk{color:var(--pink);}
     .cc .v.gn{color:var(--green);}
-    .cc .l{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-weight:500;line-height:1.4;}
-    .calc-op{color:rgba(255,255,255,.35);font-size:1.6rem;font-weight:700;padding:0 .1rem;line-height:1;}
-    .calc-divider{width:min(700px,90vw);height:1px;background:rgba(255,255,255,.1);margin:.2rem 0;}
+    .cc .l{font-size:9px;color:rgba(255,255,255,.5);margin-top:2px;font-weight:500;line-height:1.4;}
+    .calc-op{color:rgba(255,255,255,.35);font-size:1.4rem;font-weight:700;padding:0 .1rem;line-height:1;}
+    .calc-divider{width:100%;height:1px;background:rgba(255,255,255,.1);margin:.15rem 0;}
+    /* HERO TIMELINE (right column) */
+    .hero-right{padding-top:.5rem;}
+    .hero-right h3{color:rgba(255,255,255,.45);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.5rem;}
+    .hvtl{position:relative;padding-left:1.6rem;}
+    .hvtl::before{content:'';position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:rgba(255,255,255,.12);border-radius:1px;}
+    .hvtl-item{position:relative;margin-bottom:1.6rem;}
+    .hvtl-item:last-child{margin-bottom:0;}
+    .hvtl-dot{position:absolute;left:-1.6rem;top:3px;width:16px;height:16px;border-radius:50%;border:3px solid var(--dark);box-shadow:0 0 0 1px rgba(255,255,255,.15);}
+    .hvtl-dot.ok{background:var(--green);}
+    .hvtl-dot.warn{background:var(--amber);}
+    .hvtl-dot.bad{background:var(--pink);}
+    .hvtl-date{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem;}
+    .hvtl-date.ok{color:var(--green);}
+    .hvtl-date.warn{color:var(--amber);}
+    .hvtl-date.bad{color:var(--pink);}
+    .hvtl-title{color:#fff;font-size:.82rem;font-weight:700;line-height:1.35;margin-bottom:.2rem;}
+    .hvtl-body{color:rgba(255,255,255,.42);font-size:.74rem;line-height:1.6;}
 
-    /* DISPUTE TIMELINE BANNER */
-    .timeline-banner{background:var(--dark2);border-bottom:2px solid var(--pink);}
-    .timeline-inner{max-width:1100px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
-    .tl-item{display:flex;align-items:center;gap:.6rem;font-size:12px;color:rgba(255,255,255,.75);}
-    .tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-    .tl-dot.ok{background:var(--green);}
-    .tl-dot.warn{background:var(--amber);}
-    .tl-dot.bad{background:var(--pink);}
-    .tl-sep{color:rgba(255,255,255,.2);font-size:18px;}
+    /* VERTICAL TIMELINE */
+    .vtl-section{background:var(--dark2);padding:4rem 1.5rem;}
+    .vtl-hd{text-align:center;margin-bottom:3rem;}
+    .vtl-hd h2{color:#fff;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:900;letter-spacing:-.4px;}
+    .vtl-hd p{color:rgba(255,255,255,.45);font-size:.85rem;margin-top:.35rem;}
+    .vtl{position:relative;max-width:760px;margin:0 auto;}
+    .vtl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.12);transform:translateX(-50%);border-radius:1px;}
+    .vtl-item{display:flex;align-items:flex-start;margin-bottom:2.75rem;position:relative;}
+    .vtl-item:last-child{margin-bottom:0;}
+    /* LEFT items: content left, dot centre, spacer right */
+    .vtl-item.vl .vtl-content{flex:1;text-align:right;padding-right:2rem;}
+    .vtl-item.vl .vtl-node{order:2;}
+    .vtl-item.vl .vtl-space{order:3;flex:1;}
+    /* RIGHT items: spacer left, dot centre, content right */
+    .vtl-item.vr .vtl-space{flex:1;}
+    .vtl-item.vr .vtl-node{order:2;}
+    .vtl-item.vr .vtl-content{order:3;flex:1;text-align:left;padding-left:2rem;}
+    /* dot node */
+    .vtl-node{display:flex;align-items:flex-start;justify-content:center;padding-top:2px;z-index:2;}
+    .vtl-dot{width:18px;height:18px;border-radius:50%;border:3px solid var(--dark2);flex-shrink:0;box-shadow:0 0 0 2px rgba(255,255,255,.15);}
+    .vtl-dot.ok{background:var(--green);}
+    .vtl-dot.warn{background:var(--amber);}
+    .vtl-dot.bad{background:var(--pink);}
+    /* content card */
+    .vtl-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1rem 1.1rem;}
+    .vtl-date{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem;}
+    .vtl-date.ok{color:var(--green);}
+    .vtl-date.warn{color:var(--amber);}
+    .vtl-date.bad{color:var(--pink);}
+    .vtl-title{color:#fff;font-size:.9rem;font-weight:800;line-height:1.3;margin-bottom:.35rem;}
+    .vtl-body{color:rgba(255,255,255,.5);font-size:.79rem;line-height:1.65;}
 
     /* PAGE SECTIONS */
     .ps{max-width:1100px;margin:0 auto;padding:3.5rem 1.5rem;}
@@ -164,7 +205,18 @@
     footer{background:var(--dark);color:rgba(255,255,255,.4);text-align:center;padding:2rem;font-size:11px;line-height:1.7;}
     footer strong{color:rgba(255,255,255,.75);}
 
-    @media(max-width:640px){.two-col,.dpair{grid-template-columns:1fr;}.nav-links{display:none;}.stats-row .sc{min-width:110px;}.sc .v{font-size:1.5rem;}}
+    @media(max-width:720px){
+      .two-col,.dpair{grid-template-columns:1fr;}
+      .nav-links{display:none;}
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-right{border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;margin-top:.5rem;}
+      /* standalone vtl mobile */
+      .vtl::before{left:9px;transform:none;}
+      .vtl-item.vl,.vtl-item.vr{flex-direction:row !important;}
+      .vtl-item.vl .vtl-content,.vtl-item.vr .vtl-content{text-align:left !important;padding-left:1rem !important;padding-right:0 !important;flex:1;order:3 !important;}
+      .vtl-item.vl .vtl-node,.vtl-item.vr .vtl-node{order:1 !important;}
+      .vtl-space{display:none !important;}
+    }
   </style>
 </head>
 <body>
@@ -172,7 +224,7 @@
 <!-- NAV -->
 <nav>
   <div>
-    <div class="nav-brand"><em>Squid-Pro-Quo</em> · Billing Dispute Evidence Dashboard</div>
+    <div class="nav-brand">Octopus Energy · <em>Billing Dispute Evidence</em></div>
     <div class="nav-ref" style="margin-top:1px;">Account A-AD1C0529 · Complaint ref 2096731 · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
   </div>
   <div class="nav-links">
@@ -184,83 +236,113 @@
   </div>
 </nav>
 
-<!-- TIMELINE BANNER -->
-<div class="timeline-banner">
-  <div class="timeline-inner">
-    <span class="tl-item"><span class="tl-dot ok"></span>Apr 2024 — Smart meter installed. IOG billing correct.</span>
-    <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot warn"></span>8 Jan 2025 — First report to Octopus: intermittent data loss. Told to "monitor 20 days." No follow-up.</span>
-    <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot bad"></span>Oct 2025 — O2 3G shuts down. Meter goes dark. Octopus never notices; stops billing.</span>
-    <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot warn"></span>Jan 2026 — Chris discovers the gap. Raises it formally with Octopus.</span>
-    <span class="tl-sep">›</span>
-    <span class="tl-item"><span class="tl-dot bad"></span>Apr 2026 — Octopus proposes back-billing £2,557 at flat rate. Formal dispute raised.</span>
-  </div>
-</div>
-
 <!-- HERO -->
 <div class="hero">
-  <img src="octpush.png" alt="OctPush — Energy Sapping" style="width:180px;height:auto;margin-bottom:1.25rem;display:block;margin-left:auto;margin-right:auto;border-radius:16px;">
-  <div class="hero-ey">Intelligent Octopus Go · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
-  <h1>The <em>Dumb-topus</em>:<br>how a 'smart' meter left us <em>Sucker-Punched</em></h1>
-  <p class="hero-sub">The metre went dark in October 2025. Octopus didn't notice for seven months and stopped billing entirely. What happens next is still unknown — but if they back-bill at the flat Flexible rate, the numbers below show exactly what's at stake.</p>
-  <div class="stats-row">
+ <div class="hero-inner">
 
-    <!-- Row 1: the billing gap -->
-    <div class="calc-row-label">if Octopus back-bill at the flat rate…</div>
-    <div class="calc-row">
-      <div class="cc hi-pink">
-        <div class="v pk">£2,557</div>
-        <div class="l">Flat-rate back-bill risk<br>Oct 2025–Apr 2026</div>
+  <!-- LEFT: headline + numbers -->
+  <div class="hero-left">
+    <img src="octpush.png" alt="Octopus Energy billing dispute" style="width:130px;height:auto;margin-bottom:1.1rem;display:block;margin-left:auto;margin-right:auto;border-radius:14px;">
+    <div class="hero-ey">Intelligent Octopus Go · Account A-AD1C0529 · Complaint ref 2096731</div>
+    <h1>Smart Metre Failure —<br><em>Octopus Billing Dispute</em></h1>
+    <p class="hero-sub">The metre lost signal in October 2025 when O2 shut down its 3G network. Octopus stopped billing and never raised an alarm. Seven months later, they are proposing a £2,557 back-bill at the flat Flexible rate. The correct Intelligent Go charge is £1,224. This dashboard sets out the evidence.</p>
+
+    <div class="stats-row">
+      <div class="calc-row-label">flat-rate billing risk vs correct Intelligent Go charge</div>
+      <div class="calc-row">
+        <div class="cc hi-pink">
+          <div class="v pk">£2,557</div>
+          <div class="l">Flat-rate back-bill<br>(worst case)</div>
+        </div>
+        <span class="calc-op">−</span>
+        <div class="cc">
+          <div class="v gn">£1,224</div>
+          <div class="l">Correct IOG bill<br>GivEnergy-verified</div>
+        </div>
+        <span class="calc-op">=</span>
+        <div class="cc hi-pink">
+          <div class="v pk">£1,333</div>
+          <div class="l">Import overcharge<br>at stake</div>
+        </div>
       </div>
-      <span class="calc-op">−</span>
-      <div class="cc">
-        <div class="v gn">£1,224</div>
-        <div class="l">Correct Intelligent Go bill<br>GivEnergy-verified</div>
-      </div>
-      <span class="calc-op">=</span>
-      <div class="cc hi-pink">
-        <div class="v pk">£1,333</div>
-        <div class="l">Import overcharge<br>at stake</div>
+      <div class="calc-divider"></div>
+      <div class="calc-row-label">total claim breakdown</div>
+      <div class="calc-row">
+        <div class="cc">
+          <div class="v pk">£1,333</div>
+          <div class="l">Import<br>overcharge</div>
+        </div>
+        <span class="calc-op">+</span>
+        <div class="cc">
+          <div class="v pk">£149</div>
+          <div class="l">Export<br>underpayment</div>
+        </div>
+        <span class="calc-op">+</span>
+        <div class="cc">
+          <div class="v pk">£80</div>
+          <div class="l">GSOP<br>compensation</div>
+        </div>
+        <span class="calc-op">=</span>
+        <div class="cc hi-green">
+          <div class="v gn">£1,562</div>
+          <div class="l">Total claim<br>ref 2096731</div>
+        </div>
       </div>
     </div>
-
-    <div class="calc-divider"></div>
-
-    <!-- Row 2: total claim build-up -->
-    <div class="calc-row-label">total claim</div>
-    <div class="calc-row">
-      <div class="cc">
-        <div class="v pk">£1,333</div>
-        <div class="l">Import<br>overcharge</div>
-      </div>
-      <span class="calc-op">+</span>
-      <div class="cc">
-        <div class="v pk">£149</div>
-        <div class="l">Export<br>underpayment</div>
-      </div>
-      <span class="calc-op">+</span>
-      <div class="cc">
-        <div class="v pk">£80</div>
-        <div class="l">GSOP<br>compensation</div>
-      </div>
-      <span class="calc-op">=</span>
-      <div class="cc hi-green">
-        <div class="v gn">£1,562</div>
-        <div class="l">Total claim<br>ref 2096731</div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- RIGHT: timeline -->
+  <div class="hero-right">
+    <h3>Chronology of events</h3>
+    <div class="hvtl">
+
+      <div class="hvtl-item">
+        <div class="hvtl-dot ok"></div>
+        <div class="hvtl-date ok">April 2024</div>
+        <div class="hvtl-title">Smart metre installed. Intelligent Go billing active.</div>
+        <div class="hvtl-body">Half-hourly data transmitting correctly. Off-peak overnight rate (6.667p/kWh, 23:30–05:30) applied as contracted.</div>
+      </div>
+
+      <div class="hvtl-item">
+        <div class="hvtl-dot warn"></div>
+        <div class="hvtl-date warn">8 January 2025</div>
+        <div class="hvtl-title">Intermittent data loss reported to Octopus.</div>
+        <div class="hvtl-body">Flagged in writing nine months before O2's planned 3G shutdown. Agent advises "monitor for 20 days." No follow-up. No replacement arranged.</div>
+      </div>
+
+      <div class="hvtl-item">
+        <div class="hvtl-dot bad"></div>
+        <div class="hvtl-date bad">October 2025</div>
+        <div class="hvtl-title">O2 3G shutdown severs WAN signal. Metre goes dark.</div>
+        <div class="hvtl-body">Data coverage collapses: 87% → 37% → 16% → 0% (February 2026). Octopus stops billing entirely. No alert raised.</div>
+      </div>
+
+      <div class="hvtl-item">
+        <div class="hvtl-dot warn"></div>
+        <div class="hvtl-date warn">January 2026</div>
+        <div class="hvtl-title">Billing gap discovered. Formal notification to Octopus.</div>
+        <div class="hvtl-body">Engineer visit confirms two faults: WAN signal failure and a pre-existing configuration error — the metre was never set up to record on/off-peak registers separately.</div>
+      </div>
+
+      <div class="hvtl-item">
+        <div class="hvtl-dot bad"></div>
+        <div class="hvtl-date bad">April 2026</div>
+        <div class="hvtl-title">Octopus proposes flat-rate back-bill. Formal dispute raised.</div>
+        <div class="hvtl-body">Octopus declines GivEnergy inverter data and proposes £2,557 at the Flexible rate. Correct IOG bill: £1,224. GSOP 5-day window expires. Dispute formally raised.</div>
+      </div>
+
+    </div>
+  </div>
+
+ </div>
 </div>
 
 <!-- ═══ SECTION: GAP PERIOD — THE INK-VISIBLE METER ═══ -->
 <div id="gap">
 <div class="ps">
   <div class="sh">
-    <div class="ey">The Ink-visible Meter · Chart A · Gap period back-bill — Oct 2025 to Apr 2026</div>
-    <h2>Seven months of readings that vanished — and what's at stake if Octopus bill at the flat rate</h2>
+    <div class="ey">Chart A · Gap period billing — Oct 2025 to Apr 2026</div>
+    <h2>Seven months of unbilled consumption — and what's at stake if Octopus apply the flat rate</h2>
     <p>When the metre went dark, Octopus stopped receiving data and stopped issuing bills — and nobody at Octopus noticed for seven months. When the gap came to light in January 2026, the question became: how will they bill the missing period? If Octopus apply the flat Flexible rate to all 9,537 kWh, the back-bill is £2,557. The correct Intelligent Go bill — accounting for 70.3% overnight off-peak usage — is £1,224. The bars below show that gap, month by month.</p>
   </div>
 
@@ -289,7 +371,7 @@
   </div>
 
   <div class="sh" style="margin-top:3rem;">
-    <div class="ey">Chart B · Monthly back-bill breakdown</div>
+    <div class="ey">Chart B · Monthly billing breakdown</div>
     <h2>What each month's bill should look like, stacked against Octopus's flat-rate proposal</h2>
     <p>The green bars show the correct off-peak cost (6.667p/kWh overnight), the amber bars show the correct on-peak cost (Flexible rate, daytime only). The pink line is Octopus's proposed flat-rate charge for the same month — always above the correct stack, because it prices overnight electricity as if it were daytime.</p>
   </div>
@@ -327,8 +409,8 @@
 <div class="ps-alt">
 <div class="ps">
   <div class="sh">
-    <div class="ey">The Octo-Grip · Chart C · Cumulative back-bill — Oct 2025 to Apr 2026</div>
-    <h2>The overcharge tightened its grip month by month — reaching £1,333 by April</h2>
+    <div class="ey">Chart C · Cumulative billing gap — Oct 2025 to Apr 2026</div>
+    <h2>The billing gap accumulated month by month — reaching £1,333 by April</h2>
     <p>The running total of the billing gap, month by month. December and January are the worst months — peak winter consumption combined with heavy overnight EV and battery charging produced the largest single-month overcharges. February's bar is estimated by GivEnergy data; the Octopus meter recorded zero readings that month.</p>
   </div>
   <div class="card">
@@ -386,7 +468,7 @@
 <div class="ps-alt" id="peak">
 <div class="ps">
   <div class="sh">
-    <div class="ey">Sucker-Punched · Chart E · The rate applied vs the rate that should apply</div>
+    <div class="ey">Chart E · Rate applied vs rate that should apply</div>
     <h2>Octopus treated all 9,537 kWh as daytime electricity. 70.3% of it was overnight.</h2>
     <p>The left donut shows Octopus's billing assumption: 100% at the Flexible (daytime) rate for every unit across the entire gap period. The right donut shows the actual usage split, verified by GivEnergy inverter data. A household with an EV and battery charges predominantly overnight — that is precisely why Intelligent Octopus Go exists. Applying a flat daytime rate to this household's consumption pattern is not a reasonable estimate: it is the worst possible one.</p>
   </div>
@@ -452,7 +534,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>Squid-Pro-Quo · Octopus Billing Dispute Evidence Dashboard</strong> · Account A-AD1C0529 · Complaint ref 2096731</p>
+  <p><strong>Octopus Energy — Billing Dispute Evidence Dashboard</strong> · Account A-AD1C0529 · Complaint ref 2096731</p>
   <p>Sources: GivEnergy inverter CH2414G266 (5-min resolution) · Octopus API half-hourly data · Flexible rate history via AgileBuddy</p>
   <p style="margin-top:.3rem;">Off-peak rate: 6.667p/kWh (23:30–05:30) · On-peak: 24.5–28.09p/kWh (actual published rates per month) · Export: 15p/kWh to Feb 2026, 12p/kWh from Mar 2026</p>
   <p style="margin-top:.5rem;color:rgba(255,255,255,.25);">Prepared by Chris Upton · ceupton@gmail.com</p>
@@ -509,7 +591,7 @@
   <div class="mbox">
     <button class="mcl" onclick="closeModal('m-config')">✕</button>
     <div class="mtag">Meter Configuration Fault</div>
-    <h3>Tentacle-Tangled: the metre was never set up to record time-of-use data correctly</h3>
+    <h3>Metre Configuration Fault: never set up to record time-of-use data correctly</h3>
     <p>The engineer who visited on 1 April 2026 confirmed not one but two separate faults. The first was the O2 signal problem. The second was more fundamental: the metre had never been configured to maintain separate registers for on-peak and off-peak consumption.</p>
     <div class="mhl"><strong>This means the metre could not have billed correctly on Intelligent Octopus Go from the day it was installed</strong> — even when it was transmitting data. Correct IOG billing requires the metre to distinguish half-hourly consumption by time-of-use period. Without that configuration, the metre was not fit for purpose on this tariff.</div>
     <p>Octopus's response — that their T&Cs permit profile-based (flat-rate) billing when half-hourly data is unavailable — addresses only the signal failure. It does not address the prior configuration fault, nor the question of who approved this metre for IOG billing in this state, nor why two years of apparently correct IOG bills were produced from a metre that lacked the registers to support them.</p>
