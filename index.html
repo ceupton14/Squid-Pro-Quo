@@ -46,13 +46,19 @@
     .hero h1{color:#fff;font-size:clamp(1.8rem,4.5vw,3.25rem);font-weight:900;line-height:1.07;letter-spacing:-1.5px;margin-bottom:.9rem;max-width:820px;margin-left:auto;margin-right:auto;}
     .hero h1 em{color:var(--pink);font-style:normal;}
     .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:580px;margin:0 auto 2.5rem;}
-    .stats-row{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
-    .sc{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:1rem 1.4rem;min-width:130px;text-align:center;}
-    .sc .v{font-size:1.85rem;font-weight:900;letter-spacing:-1px;color:#fff;}
-    .sc .v.pk{color:var(--pink);}
-    .sc .v.gn{color:var(--green);}
-    .sc .v.am{color:var(--amber);}
-    .sc .l{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-weight:500;line-height:1.4;}
+    .stats-row{display:flex;flex-direction:column;gap:.6rem;align-items:center;position:relative;z-index:1;}
+    /* calc rows */
+    .calc-row{display:flex;gap:.5rem;justify-content:center;align-items:center;flex-wrap:wrap;}
+    .calc-row-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);text-align:center;margin-top:.25rem;}
+    .cc{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:.85rem 1.2rem;min-width:115px;text-align:center;}
+    .cc.hi-pink{background:rgba(255,31,90,.18);border-color:rgba(255,31,90,.35);}
+    .cc.hi-green{background:rgba(61,214,140,.15);border-color:rgba(61,214,140,.3);}
+    .cc .v{font-size:1.65rem;font-weight:900;letter-spacing:-1px;color:#fff;}
+    .cc .v.pk{color:var(--pink);}
+    .cc .v.gn{color:var(--green);}
+    .cc .l{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-weight:500;line-height:1.4;}
+    .calc-op{color:rgba(255,255,255,.35);font-size:1.6rem;font-weight:700;padding:0 .1rem;line-height:1;}
+    .calc-divider{width:min(700px,90vw);height:1px;background:rgba(255,255,255,.1);margin:.2rem 0;}
 
     /* DISPUTE TIMELINE BANNER */
     .timeline-banner{background:var(--dark2);border-bottom:2px solid var(--pink);}
@@ -198,14 +204,54 @@
   <img src="octpush.png" alt="OctPush — Energy Sapping" style="width:180px;height:auto;margin-bottom:1.25rem;display:block;margin-left:auto;margin-right:auto;border-radius:16px;">
   <div class="hero-ey">Intelligent Octopus Go · 1 Cresswell Lane, Malmesbury SN16 9PE</div>
   <h1>The <em>Dumb-topus</em>:<br>how a 'smart' meter left us <em>Sucker-Punched</em></h1>
-  <p class="hero-sub">The meter went dark in October 2025. Octopus didn't notice for seven months. Now they want £2,557 — billed at the wrong rate, using data they don't have, for a tariff they never correctly configured. The right answer is <strong style="color:var(--green);">£1,224</strong>.</p>
+  <p class="hero-sub">The metre went dark in October 2025. Octopus didn't notice for seven months and stopped billing entirely. What happens next is still unknown — but if they back-bill at the flat Flexible rate, the numbers below show exactly what's at stake.</p>
   <div class="stats-row">
-    <div class="sc"><div class="v pk">£2,557</div><div class="l">Octopus back-bill<br>Oct 2025–Apr 2026</div></div>
-    <div class="sc"><div class="v gn">£1,224</div><div class="l">Correct Intelligent Go bill<br>GivEnergy-verified</div></div>
-    <div class="sc"><div class="v pk">£1,333</div><div class="l">Import overcharge<br>at stake</div></div>
-    <div class="sc"><div class="v pk">£149</div><div class="l">Export underpayment<br>Jul 2024–Apr 2026</div></div>
-    <div class="sc"><div class="v pk">£80</div><div class="l">GSOP compensation<br>already accrued</div></div>
-    <div class="sc"><div class="v gn">£1,517</div><div class="l">Total claim<br>ref 2096731</div></div>
+
+    <!-- Row 1: the billing gap -->
+    <div class="calc-row-label">if Octopus back-bill at the flat rate…</div>
+    <div class="calc-row">
+      <div class="cc hi-pink">
+        <div class="v pk">£2,557</div>
+        <div class="l">Flat-rate back-bill risk<br>Oct 2025–Apr 2026</div>
+      </div>
+      <span class="calc-op">−</span>
+      <div class="cc">
+        <div class="v gn">£1,224</div>
+        <div class="l">Correct Intelligent Go bill<br>GivEnergy-verified</div>
+      </div>
+      <span class="calc-op">=</span>
+      <div class="cc hi-pink">
+        <div class="v pk">£1,333</div>
+        <div class="l">Import overcharge<br>at stake</div>
+      </div>
+    </div>
+
+    <div class="calc-divider"></div>
+
+    <!-- Row 2: total claim build-up -->
+    <div class="calc-row-label">total claim</div>
+    <div class="calc-row">
+      <div class="cc">
+        <div class="v pk">£1,333</div>
+        <div class="l">Import<br>overcharge</div>
+      </div>
+      <span class="calc-op">+</span>
+      <div class="cc">
+        <div class="v pk">£149</div>
+        <div class="l">Export<br>underpayment</div>
+      </div>
+      <span class="calc-op">+</span>
+      <div class="cc">
+        <div class="v pk">£80</div>
+        <div class="l">GSOP<br>compensation</div>
+      </div>
+      <span class="calc-op">=</span>
+      <div class="cc hi-green">
+        <div class="v gn">£1,562</div>
+        <div class="l">Total claim<br>ref 2096731</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -214,14 +260,14 @@
 <div class="ps">
   <div class="sh">
     <div class="ey">The Ink-visible Meter · Chart A · Gap period back-bill — Oct 2025 to Apr 2026</div>
-    <h2>Seven months of readings that vanished — and a £2,557 back-bill at the wrong rate</h2>
-    <p>When the meter went dark, Octopus stopped receiving data and stopped issuing bills. Nobody at Octopus noticed. When the gap finally came to light in January 2026, Octopus proposed recovering seven months of unbilled consumption using the flat Flexible rate — ignoring entirely that 70.3% of all consumption in this household falls in the cheap overnight window. Here is what the correct Intelligent Go bill looks like beside Octopus's flat-rate back-bill.</p>
+    <h2>Seven months of readings that vanished — and what's at stake if Octopus bill at the flat rate</h2>
+    <p>When the metre went dark, Octopus stopped receiving data and stopped issuing bills — and nobody at Octopus noticed for seven months. When the gap came to light in January 2026, the question became: how will they bill the missing period? If Octopus apply the flat Flexible rate to all 9,537 kWh, the back-bill is £2,557. The correct Intelligent Go bill — accounting for 70.3% overnight off-peak usage — is £1,224. The bars below show that gap, month by month.</p>
   </div>
 
   <div class="metric-row">
-    <div class="mt"><div class="mv pk">£2,557</div><div class="ml">Octopus back-bill<br>(flat Flexible rate)</div></div>
+    <div class="mt"><div class="mv pk">£2,557</div><div class="ml">Flat-rate back-bill<br>(worst case)</div></div>
     <div class="mt"><div class="mv gn">£1,224</div><div class="ml">Correct Intelligent Go bill<br>(GivEnergy-verified)</div></div>
-    <div class="mt"><div class="mv pk">£1,333</div><div class="ml">Overcharge<br>at stake</div></div>
+    <div class="mt"><div class="mv pk">£1,333</div><div class="ml">Difference at stake<br>if flat rate is applied</div></div>
     <div class="mt"><div class="mv">9,537 kWh</div><div class="ml">Total gap-period<br>import (GivEnergy)</div></div>
     <div class="mt"><div class="mv am">6,706 kWh</div><div class="ml">Off-peak share<br>(70.3% of total)</div></div>
     <div class="mt"><div class="mv bl">6.667p</div><div class="ml">Off-peak rate — what<br>Octopus should charge</div></div>
@@ -229,7 +275,7 @@
 
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="legend">
-      <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Octopus back-bill (flat Flexible rate)</span>
+      <span class="li"><span class="ls" style="background:#FF1F5A;"></span>Flat-rate billing (worst case)</span>
       <span class="li"><span class="ls" style="background:#3DD68C;"></span>Correct Intelligent Go bill</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
@@ -237,7 +283,7 @@
     </div>
     <div class="oc-band">
       <div class="ob">£1,333.37</div>
-      <div class="ot">total overcharge in Octopus's proposed back-bill — 6,706 kWh of cheap overnight electricity billed as if it were expensive daytime power.</div>
+      <div class="ot">at stake if Octopus apply the flat Flexible rate — 6,706 kWh of cheap overnight electricity priced as if it were expensive daytime power.</div>
     </div>
     <button class="info-btn" onclick="openModal('m-tariff')">ⓘ How Intelligent Octopus Go billing works</button>
   </div>
@@ -252,7 +298,7 @@
     <div class="legend">
       <span class="li"><span class="ls" style="background:#3DD68C;"></span>Off-peak kWh @ 6.667p (correct)</span>
       <span class="li"><span class="ls" style="background:#F5A623;"></span>On-peak kWh @ Flexible rate (correct)</span>
-      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Octopus flat back-bill (wrong)</span>
+      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>Flat-rate billing (worst case)</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
       <canvas id="chartB" role="img" aria-label="Stacked bar chart showing the correct off-peak and on-peak costs making up the correct IOG bill each month, with the Octopus flat back-bill shown as an overlaid line well above the stack.">Correct IOG split by month: off-peak cost dominates every month due to 70%+ overnight charging pattern.</canvas>
@@ -306,18 +352,18 @@
 <div class="ps">
   <div class="sh">
     <div class="ey">Chart D · Year on year · October – April winter season</div>
-    <h2>The same winter, billed correctly versus incorrectly — a £1,333 swing between identical consumption</h2>
-    <p>The 2024–25 winter (blue) shows Intelligent Go billing working exactly as intended. The 2025–26 winter shows both what Octopus are proposing to charge at the flat rate (pink) and what the correct IOG bill would have been (green dashed). The two "correct" lines are almost identical — the consumption pattern barely changed year on year. Only the billing method changed, because the meter went dark.</p>
+    <h2>The same winter, billed correctly versus at the flat rate — a £1,333 swing between identical consumption</h2>
+    <p>The 2024–25 winter (blue) shows Intelligent Go billing working exactly as intended. The 2025–26 winter shows both what a flat-rate bill would look like (pink) and what the correct IOG bill should be (green dashed). The two "correct" lines are almost identical — the consumption pattern barely changed year on year. Only the metre went dark.</p>
   </div>
   <div class="card">
     <div class="trow">
       <button class="tb on" onclick="setYoY('bills',this)">All lines</button>
-      <button class="tb" onclick="setYoY('compare',this)">Octopus proposed vs correct only</button>
+      <button class="tb" onclick="setYoY('compare',this)">Flat-rate risk vs correct only</button>
     </div>
     <div class="legend">
       <span class="li"><span class="ll" style="background:#378ADD;"></span>2024–25 correct IOG (meter working)</span>
-      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>2025–26 Octopus flat-rate back-bill (wrong)</span>
-      <span class="li"><span class="ld" style="color:#3DD68C;"></span>2025–26 correct IOG (should have been charged)</span>
+      <span class="li"><span class="ll" style="background:#FF1F5A;"></span>2025–26 flat-rate billing risk</span>
+      <span class="li"><span class="ld" style="color:#3DD68C;"></span>2025–26 correct IOG (what it should be)</span>
     </div>
     <div class="chart-wrap" style="height:300px;">
       <canvas id="chartD" role="img" aria-label="Multi-line chart comparing October to April billing for 2024-25 and 2025-26 seasons. The 2024-25 and 2025-26 correct IOG lines are nearly identical; the 2025-26 Octopus flat-rate back-bill is dramatically higher.">Winter season comparison: 2024-25 total correct £1,214; 2025-26 correct would be £1,224; 2025-26 Octopus back-bill is £2,557.</canvas>
@@ -329,7 +375,7 @@
       </div>
       <div class="oc-band">
         <div class="ob">£2,557</div>
-        <div class="ot">Total winter 2025–26 (Octopus flat-rate back-bill, meter dark)</div>
+        <div class="ot">Winter 2025–26 at flat rate (worst-case risk, metre dark)</div>
       </div>
     </div>
   </div>
@@ -558,7 +604,7 @@ new Chart(document.getElementById('chartA'),{
   data:{
     labels: GAP_LABELS,
     datasets:[
-      { label:'Octopus back-bill', data:GAP_FLEX, backgroundColor:'#FF1F5A', borderRadius:4, borderSkipped:false },
+      { label:'Flat-rate billing (worst case)', data:GAP_FLEX, backgroundColor:'#FF1F5A', borderRadius:4, borderSkipped:false },
       { label:'Correct IOG bill', data:GAP_IOG, backgroundColor:'#3DD68C', borderRadius:4, borderSkipped:false }
     ]
   },
@@ -580,7 +626,7 @@ new Chart(document.getElementById('chartB'),{
     datasets:[
       { label:'Off-peak cost @ 6.667p', data:GAP_OP_COST, backgroundColor:'#3DD68C', stack:'c', borderRadius:0 },
       { label:'On-peak cost @ Flexible rate', data:GAP_IP_COST, backgroundColor:'#F5A623', stack:'c', borderRadius:[4,4,0,0] },
-      { label:'Octopus flat back-bill', data:GAP_FLEX, type:'line', borderColor:'#FF1F5A', backgroundColor:'transparent', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35, order:0 }
+      { label:'Flat-rate billing (worst case)', data:GAP_FLEX, type:'line', borderColor:'#FF1F5A', backgroundColor:'transparent', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35, order:0 }
     ]
   },
   options:{
@@ -600,7 +646,7 @@ new Chart(document.getElementById('chartC'),{
   data:{
     labels: GAP_LABELS,
     datasets:[
-      { label:'Cumulative Octopus back-bill', data:cumsum(GAP_FLEX), borderColor:'#FF1F5A', backgroundColor:'rgba(255,31,90,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#FF1F5A', tension:.4 },
+      { label:'Cumulative flat-rate billing (worst case)', data:cumsum(GAP_FLEX), borderColor:'#FF1F5A', backgroundColor:'rgba(255,31,90,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#FF1F5A', tension:.4 },
       { label:'Cumulative correct IOG', data:cumsum(GAP_IOG), borderColor:'#3DD68C', backgroundColor:'rgba(61,214,140,.08)', fill:true, borderWidth:2.5, pointRadius:3, pointBackgroundColor:'#3DD68C', tension:.4 }
     ]
   },
@@ -621,7 +667,7 @@ let chartD = new Chart(document.getElementById('chartD'),{
     labels: YOY_LABELS,
     datasets:[
       { label:'2024–25 correct IOG', data:WIN2425, borderColor:'#378ADD', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#378ADD', tension:.35 },
-      { label:'2025–26 Octopus flat back-bill (wrong)', data:GAP_FLEX, borderColor:'#FF1F5A', borderWidth:3, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35 },
+      { label:'2025–26 flat-rate billing risk', data:GAP_FLEX, borderColor:'#FF1F5A', borderWidth:3, pointRadius:4, pointBackgroundColor:'#FF1F5A', tension:.35 },
       { label:'2025–26 correct IOG', data:GAP_IOG, borderColor:'#3DD68C', borderWidth:2, borderDash:[6,4], pointRadius:3, pointBackgroundColor:'#3DD68C', tension:.35 }
     ]
   },
